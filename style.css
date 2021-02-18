@@ -1,0 +1,299 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:Border-box;
+    
+   
+}
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    background-image:url("images/RapAlbums.jpg");
+    background-size: cover; /* Resize the background image to cover the entire container */
+    margin:0;
+   padding:0;
+   height:100%
+    
+}
+.container{
+    min-height:100%;
+   position:relative;
+}
+.body{
+    padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    /*-- auto prepei na einai poli xazo alla xwris auto to menu kribetai pisw apo alla objects otan einai drop down menu*/
+    z-index: 1000;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: .555;
+}
+p{
+    color: .555;
+}
+
+.row{
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.body .row .col-1{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.body .row .col-2 img{
+    max-width: 70%;
+    float: left;
+      
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: orangered;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition:  0.5s;
+}
+.btn:hover{
+    background: purple;
+}
+.header{
+    background: radial-gradient(yellow,green);
+    padding:10px;
+}
+.body .row{
+    margin-top: 70px;
+    background:  rgba(255, 255, 255, 0.30);
+}
+.Menu_Icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+.body .about{
+    background: rgba(255, 255, 255, 0.30) ;
+}
+/*------contact form----*/
+.contact-form input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+.contact-form input[type=submit] {
+    background-color: #4CAF50;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.contact-form input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+.contact-form {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.30);
+    padding: 20px;
+  }
+  /*-----login forms--------*/
+.login {
+    position: relative;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.30);
+    padding: 20px 0 30px 0;
+    top: 10px;
+}
+.login input,.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none; 
+  }
+  
+  .login input:hover,.btn:hover {
+    opacity: 1;
+  }
+  
+  .login .fb {
+    background-color: #3B5998;
+    color: white;
+  }
+  
+  .login .twitter {
+    background-color: #55ACEE;
+    color: white;
+  }
+  
+  .login .google {
+    background-color: #dd4b39;
+    color: white;
+  }
+
+  .login input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .login input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .login .login-row .login-col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    
+  }
+
+  .login .login-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .login .vl {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid #ddd;
+    height: 500px;
+  }
+
+  .login .vl-innertext {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 8px 10px;
+  }
+
+  .login .hide-md-lg {
+    display: none;
+  }
+  
+  .login .login-bottom-container  {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    
+   
+  
+  }
+
+/*-----footer------*/
+.footer{
+    position:fixed;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   color: white;
+   background: black;
+   font-size: 10px;
+}
+.footer img{
+    
+    width: 20%;
+}
+ 
+  /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+  @media only screen and (max-width: 650px) {
+    .login .login-row .login-col {
+      width: 100%;
+      margin-top: 0;
+    }
+    /* hide the vertical line */
+    .login .login-row .vl {
+      display: none;
+    }
+     
+    /* show the hidden text on small screens */
+    .login .hide-md-lg {
+      display: block;
+      text-align: center;
+    }
+  }
+/*------media query for menu icon------*/
+@media only screen and (max-width:800px){
+    nav ul{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background: #333;
+        width:100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    .Menu_Icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/*------media query for less than 600 screen size -----*/
+@media only screen and (max-width:600px){
+    .row{
+        text-align: center;
+    }
+    .col-2{
+        flex-basis: 100%;
+    }
+   .footer .footer-col-1{
+       display: none;
+   }
+  
+}
+
+ 

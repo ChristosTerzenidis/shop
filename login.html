@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title>PRODUCTS|Ecommerce Project</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/tabulator-tables@4.9.1/dist/css/tabulator.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.1/dist/js/tabulator.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Site Logo" width="60px">
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html"><b>HOME</b></a></li>
+                            <li><a href="products.php"><b>PRODUCTS</b></a></li>
+                            <li><a href="about.html"><b>ABOUT</b></a></li>
+                            <li><a href="contact.html"><b>CONTACT US</b></a></li>
+                            <li><a href="login.html"><b>ACCOUNT</b></a></li>
+                        </ul>
+                    </nav>
+                    <img src="images/Shopping_cart.png" alt="Shopping cart" width="30px" height="30px">
+                    <img src="images/Menu.png" alt="Menu icon"  class="Menu_Icon" onclick="menutoggle()">
+                </div>
+            </div>
+        </div>
+        <!----body-->
+        <div class="body">
+            <div class="login">
+                    <div class="login-row">
+
+                        <form action="login.php" method="GET">
+                        <div class="login-col">
+                            <h2 style="text-align:center">Already Registered.</h2>
+                        
+                                <input type="text" name="username" placeholder="Username" required>
+                                <input type="password" name="password" placeholder="Password" required>
+                                <span class="forgot-password">
+                                    <a href="contact.html" title="Forgot Password" id="link-reset">Forgot Password?</a>
+                                  </span>
+                                <input type="submit" value="Login">   
+                                
+                                <p style="text-align: center;">or</p>
+
+                            <a href="#" class="fb btn">
+                                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                            </a>
+        
+                            <a href="#" class="twitter btn">
+                                <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                            </a>
+        
+                            <a href="#" class="google btn">
+                                <i class="fa fa-google fa-fw"></i> Login with Google+
+                            </a>
+        
+                            </div>
+                        </form>
+
+                            <div class="vl"></div>
+
+                            <form action="post.php" method="POST">
+                            <div class="login-col">
+                                <h2 style="text-align:center">New to Ecommerce.</h2>
+
+                                <input autofocus="" id="firstname" name="firstname" placeholder="First Name" type="text" required >
+                                <input autofocus="" id="lastname" name="lastname" placeholder="Last Name" type="text" required >
+                                <input autofocus="" id="username" name="username" placeholder="Username" type="text" required  >
+                                <input autofocus="" id="password" name="password" placeholder="Password" type="password" required >
+                                
+                                <p>Show Password</p>
+                               <input type="checkbox" onclick="myFunction()">
+                                
+                                
+                                <input type="submit" value="Sign Up">
+
+                            </div>
+                        </form>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+        <!--footer-->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Project</h3>
+                        <p>
+                            Dummy text Dummy text Dummy text Dummy text<br> 
+                            Dummy text Dummy text Dummy text Dummy text<br> 
+                            Dummy text Dummy text Dummy text Dummy text<br> 
+                        </p>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/Logo-white.png" alt="Site Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!------js for toggle menu-->
+    <script>
+        var MenuItems=document.getElementById("MenuItems");
+        MenuItems.style.maxHeight="0px";
+        function menutoggle(){
+            if(MenuItems.style.maxHeight=="0px")
+            {
+                MenuItems.style.maxHeight="200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight="0px";
+            }
+        }
+    </script>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+
+<script>
+    function querySelector() {
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+    }
+    </script>
+
+
+
+
+
+
+    </body>
+</html>
